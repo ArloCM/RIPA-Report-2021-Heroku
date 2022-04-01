@@ -12,6 +12,7 @@ def load_data(filepath, year = None):
         df = df[df['year'] == year]
     return df
 
+
 def app():
         
     filepath = 'ripa.csv'

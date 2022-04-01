@@ -13,7 +13,16 @@ hide_decoration_bar_style = '''
     </style>
 '''
 st.markdown(hide_decoration_bar_style, unsafe_allow_html=True)
+st.markdown(""" <style>
+@font-face {
+  font-family: 'Oswald';
+  src: url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+}
 
+    html, body, [class*="css"]  {
+    font-family: 'Oswald';
+    }
+    </style> """, unsafe_allow_html=True)
 # Title of the main page
 st.title("BPD Stop Data Analysis")
 # col1, col2, col3 = st.sidebar.columns([1,1,6])
