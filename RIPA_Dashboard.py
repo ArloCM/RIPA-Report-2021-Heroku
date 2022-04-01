@@ -172,23 +172,14 @@ def app():
 
     option4 = st.sidebar.selectbox('Select a demographic baseline',
                             ['Berkeley',
-                            'Alameda and Contra Costa Counties',
-                            'Alameda, Contra Costa and San Francisco Counties',
-                            'Metropolitan Statiscal Area',
-                            'Oakland, Berkeley and Richmond',
+                            'Stop Data Residence Demographics',
                             'Victim Described Suspect Demographics',
                             'Count'],
-                            6
+                            3
                             )
     if option4 == 'Berkeley':
         population = 'berkeley'
-    elif option4 == 'Alameda and Contra Costa Counties':
-        population = 'ala_ccc'
-    elif option4 == 'Alameda, Contra Costa and San Francisco Counties':
-        population = 'ala_ccc_sfo'
-    elif option4 == 'Metropolitan Statiscal Area':
-        population = 'met_stat_area'
-    elif option4 == 'Oakland, Berkeley and Richmond':
+    elif option4 == 'Stop Data Residence Demographics':
         population = 'oak_berk_rich'
     elif option4 == 'Victim Described Suspect Demographics':
         population = 'other'

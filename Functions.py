@@ -1166,13 +1166,13 @@ def plot_stops(df, pedestrian, vehicle, searches, no_searches, arrests, citation
     else:
         pass
     
-    berkeley_pop = 120179
+    berkeley_pop = 120463
 
     if population == 'berkeley':
-        black_pct = .083
-        white_pct = .591
+        black_pct = .079
+        white_pct = .588
         hispanic_pct = .11
-        asian_pct = .196
+        asian_pct = .21
         pop_title = 'Berkeley Demographics'
     elif population == 'ala_ccc':
         black_pct = ( ( (1150000 * .085) + (1670000 * .101) )/ 2 ) / ( (1150000 + 1670000) / 2 )
@@ -1193,10 +1193,10 @@ def plot_stops(df, pedestrian, vehicle, searches, no_searches, arrests, citation
         asian_pct = .263
         pop_title = 'Metropolitan Statiscal Area Demographics'
     elif population == 'oak_berk_rich':
-        black_pct = ( ( (109000 * .42) + (429000 * .227) + (120179 * .083) ) / 3 ) / ( (109000 + 429000 + 120179) / 3 )
-        white_pct = ( ( (109000 * .179) + (429000 * .29) + (120179 * .591) ) / 3 ) / ( (109000 + 429000 + 120179) / 3 )
-        hispanic_pct = ( ( (109000 * .202) + (429000 * .265) + (120179 * .11) ) / 3 ) / ( (109000 + 429000 + 120179) / 3 )
-        asian_pct = ( ( (109000 * .147) + (429000 * .152) + (120179 * .196) ) / 3 ) / ( (109000 + 429000 + 120179) / 3 )
+        black_pct = ( ( (111701*.0352 * .2) + (444956*.0778 * .24) + (120463*.6835 * .083) ) / 3 ) / ( (111701*.0352 + 444956*.0778 + 120463*.6835) / 3 )
+        white_pct = ( ( (111701*.0352 * .36) + (444956*.0778 * .35) + (120463*.6835 * .591) ) / 3 ) / ( (111701*.0352 + 444956*.0778 + 120463*.6835) / 3 )
+        hispanic_pct = ( ( (111701*.0352 * .42) + (444956*.0778 * .27) + (120463*.6835 * .11) ) / 3 ) / ( (111701*.0352 + 444956*.0778 + 120463*.6835) / 3 )
+        asian_pct = ( ( (111701*.0352 * .23) + (444956*.0778 * .17) + (120463*.6835 * .21) ) / 3 ) / ( (111701*.0352 + 444956*.0778 + 120463*.6835) / 3 )
         pop_title = 'Oakland, Berkeley and Richmond Demographics'
     elif population == 'other':
         black_pct = 0.519997
@@ -1433,13 +1433,13 @@ def get_initial_outcome_values(stops_df, vehicle, pedestrian, population, freq, 
         stops_df = stops_df[stops_df['pedestrian'] == 1]
     
     
-    berkeley_pop = 120179
+    berkeley_pop = 120463
 
     if population == 'berkeley':
-        black_pct = .083
-        white_pct = .591
+        black_pct = .079
+        white_pct = .588
         hispanic_pct = .11
-        asian_pct = .196
+        asian_pct = .21
         pop_title = 'Berkeley'
     elif population == 'ala_cc':
         black_pct = ( ( (1150000 * .085) + (1670000 * .101) )/ 2 ) / ( (1150000 + 1670000) / 2 )
@@ -1460,10 +1460,10 @@ def get_initial_outcome_values(stops_df, vehicle, pedestrian, population, freq, 
         asian_pct = .263
         pop_title = 'Metropolitan Statiscal Area Demographics'
     elif population == 'oak_berk_rich':
-        black_pct = ( ( (109000 * .42) + (429000 * .227) + (120179 * .083) ) / 3 ) / ( (109000 + 429000 + 120179) / 3 )
-        white_pct = ( ( (109000 * .179) + (429000 * .29) + (120179 * .591) ) / 3 ) / ( (109000 + 429000 + 120179) / 3 )
-        hispanic_pct = ( ( (109000 * .202) + (429000 * .265) + (120179 * .11) ) / 3 ) / ( (109000 + 429000 + 120179) / 3 )
-        asian_pct = ( ( (109000 * .147) + (429000 * .152) + (120179 * .196) ) / 3 ) / ( (109000 + 429000 + 120179) / 3 )
+        black_pct = ( ( (111701*.0352 * .2) + (444956*.0778 * .24) + (120463*.6835 * .083) ) / 3 ) / ( (111701*.0352 + 444956*.0778 + 120463*.6835) / 3 )
+        white_pct = ( ( (111701*.0352 * .36) + (444956*.0778 * .35) + (120463*.6835 * .591) ) / 3 ) / ( (111701*.0352 + 444956*.0778 + 120463*.6835) / 3 )
+        hispanic_pct = ( ( (111701*.0352 * .42) + (444956*.0778 * .27) + (120463*.6835 * .11) ) / 3 ) / ( (111701*.0352 + 444956*.0778 + 120463*.6835) / 3 )
+        asian_pct = ( ( (111701*.0352 * .23) + (444956*.0778 * .17) + (120463*.6835 * .21) ) / 3 ) / ( (111701*.0352 + 444956*.0778 + 120463*.6835) / 3 )
         pop_title = 'Oakland, Berkeley and Richmond Demographics'
     elif population == 'other':
         black_pct = 0.519997
@@ -1537,7 +1537,7 @@ def plot_ratios(#vehicle, pedestrian,
     else:
         time = 'Year'
     
-    berkeley_pop = 121643
+    berkeley_pop = 120463
 
     if population == 'berkeley':
         black_pct = .083
@@ -1560,12 +1560,12 @@ def plot_ratios(#vehicle, pedestrian,
         white_pct = .41
         pop_title = 'Nine County Bay Area Demographics'
     elif population == 'oak_berk_rich':
-        black_pct = ( ( (110000 * .20) + (429000 * .236) + (121643 * .083) ) / 3 ) / ( (110000 + 429000 + 121643) / 3 )
-        white_pct = ( ( (110000 * .372) + (429000 * .361) + (121643 * .591) ) / 3 ) / ( (110000 + 429000 + 883000) / 3 )
+        black_pct = ( ( (111701*.0352 * .2) + (444956*.0778 * .24) + (120463*.6835 * .083) ) / 3 ) / ( (111701*.0352 + 444956*.0778 + 120463*.6835) / 3 )
+        white_pct = ( ( (111701*.0352 * .36) + (444956*.0778 * .35) + (120463*.6835 * .591) ) / 3 ) / ( (111701*.0352 + 444956*.0778 + 120463*.6835) / 3 )
         pop_title = 'Oakland, Berkeley and Richmond Demographics'
     elif population == 'other':
-        met_stat_area_black_pct = ( ( (110000 * .20) + (429000 * .236) + (121643 * .083) ) / 3 ) / ( (110000 + 429000 + 121643) / 3 )
-        met_stat_area_white_pct = ( ( (110000 * .372) + (429000 * .361) + (121643 * .591) ) / 3 ) / ( (110000 + 429000 + 883000) / 3 )
+        met_stat_area_black_pct = ( ( (110000 * .20) + (444956*.0778 * .236) + (121643 * .083) ) / 3 ) / ( (110000 + 444956*.0778 + 121643) / 3 )
+        met_stat_area_white_pct = ( ( (110000 * .372) + (444956*.0778 * .361) + (121643 * .591) ) / 3 ) / ( (110000 + 444956*.0778 + 883000) / 3 )
         black_pct = ( ( (4 * .20) + (16 * .236) + (53 * .083) + (27 * met_stat_area_black_pct) ) / 4 ) / ( (4 + 16 + 53 + 27) / 4 )
         white_pct = ( ( (4 * .372) + (16 * .361) + (53 * .591) + (27 * met_stat_area_white_pct) ) / 4 ) / ( (4 + 16 + 53 + 27) / 4 )
         pop_title = 'Victim-Described Suspect Demographics'
@@ -1792,13 +1792,13 @@ def make_traces(stops_df, pedestrian, vehicle, searches, no_searches, arrests, c
     if (searches == True) & (no_searches == True):
         searched = ''
     
-    berkeley_pop = 120179
+    berkeley_pop = 120463
 
     if population == 'berkeley':
-        black_pct = .083
-        white_pct = .591
+        black_pct = .079
+        white_pct = .588
         hispanic_pct = .11
-        asian_pct = .196
+        asian_pct = .21
         pop_title = 'Berkeley'
     elif population == 'ala_ccc':
         black_pct = ( ( (1150000 * .085) + (1670000 * .101) )/ 2 ) / ( (1150000 + 1670000) / 2 )
@@ -1819,10 +1819,10 @@ def make_traces(stops_df, pedestrian, vehicle, searches, no_searches, arrests, c
         asian_pct = .263
         pop_title = 'Metropolitan Statiscal Area Demographics'
     elif population == 'oak_berk_rich':
-        black_pct = ( ( (109000 * .42) + (429000 * .227) + (120179 * .083) ) / 3 ) / ( (109000 + 429000 + 120179) / 3 )
-        white_pct = ( ( (109000 * .179) + (429000 * .29) + (120179 * .591) ) / 3 ) / ( (109000 + 429000 + 120179) / 3 )
-        hispanic_pct = ( ( (109000 * .202) + (429000 * .265) + (120179 * .11) ) / 3 ) / ( (109000 + 429000 + 120179) / 3 )
-        asian_pct = ( ( (109000 * .147) + (429000 * .152) + (120179 * .196) ) / 3 ) / ( (109000 + 429000 + 120179) / 3 )
+        black_pct = ( ( (111701*.0352 * .2) + (444956*.0778 * .24) + (120463*.6835 * .083) ) / 3 ) / ( (111701*.0352 + 444956*.0778 + 120463*.6835) / 3 )
+        white_pct = ( ( (111701*.0352 * .36) + (444956*.0778 * .35) + (120463*.6835 * .591) ) / 3 ) / ( (111701*.0352 + 444956*.0778 + 120463*.6835) / 3 )
+        hispanic_pct = ( ( (111701*.0352 * .42) + (444956*.0778 * .27) + (120463*.6835 * .11) ) / 3 ) / ( (111701*.0352 + 444956*.0778 + 120463*.6835) / 3 )
+        asian_pct = ( ( (111701*.0352 * .23) + (444956*.0778 * .17) + (120463*.6835 * .21) ) / 3 ) / ( (111701*.0352 + 444956*.0778 + 120463*.6835) / 3 )
         pop_title = 'Oakland, Berkeley and Richmond Demographics'
     elif population == 'other':
         black_pct = 0.519997
@@ -2019,13 +2019,13 @@ def get_outcomes_breakdown(stops_df, pedestrian, vehicle, searches, no_searches,
     elif (searches == True) & (no_searches == True):
         searched = ''
     
-    berkeley_pop = 120179
+    berkeley_pop = 120463
 
     if population == 'berkeley':
-        black_pct = .083
-        white_pct = .591
+        black_pct = .079
+        white_pct = .588
         hispanic_pct = .11
-        asian_pct = .196
+        asian_pct = .21
         pop_title = 'Berkeley Demographics'
     elif population == 'ala_ccc':
         black_pct = ( ( (1150000 * .085) + (1670000 * .101) )/ 2 ) / ( (1150000 + 1670000) / 2 )
@@ -2046,10 +2046,10 @@ def get_outcomes_breakdown(stops_df, pedestrian, vehicle, searches, no_searches,
         asian_pct = .263
         pop_title = 'Metropolitan Statiscal Area Demographics'
     elif population == 'oak_berk_rich':
-        black_pct = ( ( (109000 * .42) + (429000 * .227) + (120179 * .083) ) / 3 ) / ( (109000 + 429000 + 120179) / 3 )
-        white_pct = ( ( (109000 * .179) + (429000 * .29) + (120179 * .591) ) / 3 ) / ( (109000 + 429000 + 120179) / 3 )
-        hispanic_pct = ( ( (109000 * .202) + (429000 * .265) + (120179 * .11) ) / 3 ) / ( (109000 + 429000 + 120179) / 3 )
-        asian_pct = ( ( (109000 * .147) + (429000 * .152) + (120179 * .196) ) / 3 ) / ( (109000 + 429000 + 120179) / 3 )
+        black_pct = ( ( (111701*.0352 * .2) + (444956*.0778 * .24) + (120463*.6835 * .083) ) / 3 ) / ( (111701*.0352 + 444956*.0778 + 120463*.6835) / 3 )
+        white_pct = ( ( (111701*.0352 * .36) + (444956*.0778 * .35) + (120463*.6835 * .591) ) / 3 ) / ( (111701*.0352 + 444956*.0778 + 120463*.6835) / 3 )
+        hispanic_pct = ( ( (111701*.0352 * .42) + (444956*.0778 * .27) + (120463*.6835 * .11) ) / 3 ) / ( (111701*.0352 + 444956*.0778 + 120463*.6835) / 3 )
+        asian_pct = ( ( (111701*.0352 * .23) + (444956*.0778 * .17) + (120463*.6835 * .21) ) / 3 ) / ( (111701*.0352 + 444956*.0778 + 120463*.6835) / 3 )
         pop_title = 'Oakland, Berkeley and Richmond Demographics'
     elif population == 'other':
         black_pct = 0.519997
@@ -2155,7 +2155,7 @@ def make_ratio_traces(stops_df, vehicle, pedestrian, population, freq, minority,
     else:
         time = 'Year'
     
-    berkeley_pop = 121643
+    berkeley_pop = 120463
 
     if mh_holds:
         stops = get_outcomes_breakdown(stops_df, pedestrian = pedestrian, vehicle = vehicle,
@@ -2815,13 +2815,13 @@ def plot_stops_ratios(stops_df, population, freq,
 
 def plot_traffic_violation_offenses(df, population, top_type = 'Disparity'):
 
-    berkeley_pop = 120179
+    berkeley_pop = 120463
 
     if population == 'berkeley':
-        black_pct = .083
-        white_pct = .591
+        black_pct = .079
+        white_pct = .588
         hispanic_pct = .11
-        asian_pct = .196
+        asian_pct = .21
         pop_title = 'Berkeley Demographics'
     elif population == 'ala_ccc':
         black_pct = ( ( (1150000 * .085) + (1670000 * .101) )/ 2 ) / ( (1150000 + 1670000) / 2 )
@@ -2842,10 +2842,10 @@ def plot_traffic_violation_offenses(df, population, top_type = 'Disparity'):
         asian_pct = .263
         pop_title = 'Metropolitan Statiscal Area Demographics'
     elif population == 'oak_berk_rich':
-        black_pct = ( ( (109000 * .42) + (429000 * .227) + (120179 * .083) ) / 3 ) / ( (109000 + 429000 + 120179) / 3 )
-        white_pct = ( ( (109000 * .179) + (429000 * .29) + (120179 * .591) ) / 3 ) / ( (109000 + 429000 + 120179) / 3 )
-        hispanic_pct = ( ( (109000 * .202) + (429000 * .265) + (120179 * .11) ) / 3 ) / ( (109000 + 429000 + 120179) / 3 )
-        asian_pct = ( ( (109000 * .147) + (429000 * .152) + (120179 * .196) ) / 3 ) / ( (109000 + 429000 + 120179) / 3 )
+        black_pct = ( ( (111701*.0352 * .2) + (444956*.0778 * .24) + (120463*.6835 * .083) ) / 3 ) / ( (111701*.0352 + 444956*.0778 + 120463*.6835) / 3 )
+        white_pct = ( ( (111701*.0352 * .36) + (444956*.0778 * .35) + (120463*.6835 * .591) ) / 3 ) / ( (111701*.0352 + 444956*.0778 + 120463*.6835) / 3 )
+        hispanic_pct = ( ( (111701*.0352 * .42) + (444956*.0778 * .27) + (120463*.6835 * .11) ) / 3 ) / ( (111701*.0352 + 444956*.0778 + 120463*.6835) / 3 )
+        asian_pct = ( ( (111701*.0352 * .23) + (444956*.0778 * .17) + (120463*.6835 * .21) ) / 3 ) / ( (111701*.0352 + 444956*.0778 + 120463*.6835) / 3 )
         pop_title = 'Oakland, Berkeley and Richmond Demographics'
     elif population == 'other':
         black_pct = 0.519997
