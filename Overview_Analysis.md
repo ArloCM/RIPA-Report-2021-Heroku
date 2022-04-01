@@ -1,0 +1,1 @@
+While Black people are stopped at a rate higher than their proportion of Berkeley's residential demographics, the overall stop volume is quite low.

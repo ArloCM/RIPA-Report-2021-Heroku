@@ -1,0 +1,2 @@
+### Traffic Violations
+The chart above lists the top ten most common traffic violations that drivers were stopped for by BPD in 2021. The bars marked 'Count' show the total number of stops that were made for that violation, and the bars marked 'Disparity' subtract the number of stops of White people for that violation from the number of Black people stopped for that same violation. You can also choose to view the traffic violations that accounted for the biggest different in stops of Black and White people.

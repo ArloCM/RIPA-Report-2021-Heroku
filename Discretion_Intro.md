@@ -1,0 +1,4 @@
+The overall outcomes disparity can be caused by factors that fall within BPD’s control and others that are outside their realm of influence. Institutional drivers of disparity could include discretion in the decision to stop and search and inequitable deployment of police patrols across the city. External drivers of disparity include disparities driven by calls for service and disparate rates of offending across demographic groups. 
+
+Assigning a precise percentage of the stops disparity that each potential driver is responsible is difficult given our limited data and the complexity that interconnects these drivers; however, we can begin to identify the relative importance of some drivers of disparity in Berkeley. For factors within BPD control, we can look at patterns over time of how officers use their discretion to stop and/or search someone.
+
