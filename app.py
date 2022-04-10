@@ -18,7 +18,7 @@ st.markdown(hide_decoration_bar_style, unsafe_allow_html=True)
 
 custom_font_style = ''' <style>
 @font-face {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', 'Tahoma', 'Arial';
   src: url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 }
 
