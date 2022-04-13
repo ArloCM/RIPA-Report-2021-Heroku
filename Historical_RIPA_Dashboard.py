@@ -223,7 +223,13 @@ def app():
         except NameError:
             st.error('Error: Please make a selection for each data filter')
 
+    discretion_yield_rate_analysis = read_markdown_file('Discretion_Yield_Rate_Analysis.md')
+    st.markdown(discretion_yield_rate_analysis, unsafe_allow_html=True)
+
     st.markdown('---')
+
+    discretion_veil = read_markdown_file('Discretion_Veil.md')
+    st.markdown(discretion_veil, unsafe_allow_html=True)
 
     try:
         fig5 = plotly_veil_of_darkness(stops, year = list(range(2015, 2023)))
@@ -231,8 +237,6 @@ def app():
     except NameError:
         st.error('Error: Please make a selection for each data filter')
 
-    discretion_veil = read_markdown_file('Discretion_Veil.md')
-    st.markdown(discretion_veil, unsafe_allow_html=True)
     st.markdown('---')
 
     with st.container():

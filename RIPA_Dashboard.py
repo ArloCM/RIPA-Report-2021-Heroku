@@ -206,8 +206,8 @@ def app():
     with st.container():
         overview_intro = read_markdown_file('Overview_Intro.md')
         st.markdown(overview_intro, unsafe_allow_html=True)
-        st.image('Berkeley-Sunset-2.jpg')
-        st.header('Stops Disparities')
+        # st.image('Berkeley-Sunset-2.jpg')
+        st.header('Stops Volume & Disparities')
 
         overview_intro = read_markdown_file('Disparities.md')
         st.markdown(overview_intro, unsafe_allow_html=True)
@@ -245,8 +245,8 @@ def app():
     st.markdown('---')
 
 
-    overview_analysis = read_markdown_file('Overview_Analysis.md')
-    st.markdown(overview_analysis, unsafe_allow_html=True)
+    # overview_analysis = read_markdown_file('Overview_Analysis.md')
+    # st.markdown(overview_analysis, unsafe_allow_html=True)
 
     with st.container():
         st.header('Officer Discretion')
@@ -331,17 +331,21 @@ def app():
             chart_placeholder2.plotly_chart(fig4)
         except NameError:
             st.error('Error: Please make a selection for each data filter')
+    
+    discretion_yield_rate_analysis = read_markdown_file('Discretion_Yield_Rate_Analysis.md')
+    st.markdown(discretion_yield_rate_analysis, unsafe_allow_html=True)
 
     st.markdown('---')
 
+    discretion_veil = read_markdown_file('Discretion_Veil.md')
+    st.markdown(discretion_veil, unsafe_allow_html=True)
+    
     try:
         fig5 = plotly_veil_of_darkness(stops, year = [2021])
         st.plotly_chart(fig5)
     except NameError:
         st.error('Error: Please make a selection for each data filter')
 
-    discretion_veil = read_markdown_file('Discretion_Veil.md')
-    st.markdown(discretion_veil, unsafe_allow_html=True)
     st.markdown('---')
     
     with st.container():
