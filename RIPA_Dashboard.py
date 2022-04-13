@@ -377,4 +377,4 @@ def app():
     # traffic_violations = read_markdown_file('Traffic_Violations.md')
     # st.markdown(traffic_violations, unsafe_allow_html=True)
 
-    st.image('Berkeley_Banner.jpg')
+    # st.image('Berkeley_Banner.jpg')

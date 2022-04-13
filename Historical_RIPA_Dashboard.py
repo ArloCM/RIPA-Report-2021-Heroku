@@ -252,4 +252,4 @@ def app():
     st.components.v1.iframe(src, width=None, height=500, scrolling=False)
 
     st.markdown('---')
-    st.image('Berkeley_Banner.jpg')
+    # st.image('Berkeley_Banner.jpg')
