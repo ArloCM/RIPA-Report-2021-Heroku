@@ -25,7 +25,7 @@ params = {'legend.fontsize':14,
           'axes.titlesize':28,
           'xtick.labelsize':12,
           'ytick.labelsize':12,
-          'font.family':'Nunito'}
+          'font.family':'Nunito, Tahoma, Arial'}
 plt.rcParams.update(params)
 import seaborn as sns
 import plotly.express as px
@@ -487,18 +487,18 @@ def plotly_yield_after_search_beat(stops_df,
                                            sizeref = 2. * max(size) / (75 ** 2),
                                            color = 'rgb(93, 164, 214)'),
                              textposition = 'middle center',
-                             textfont = {'family': 'Nunito', 'size': 12},
+                             textfont = {'family': 'Nunito, Tahoma, Arial', 'size': 12},
                              hoverinfo = 'text',
                              hovertext = text,
                              hoverlabel = {'bgcolor': 'white',
-                                           'font': {'family': 'Nunito', 'size': 12}},
+                                           'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                              showlegend = False)
 
     x_lim = ( round(min(x.dropna()) - .05, 1), round(max(x.dropna()) + .05, 1) )
     x_lim_frac = (x_lim[1] - x_lim[0])/5
 
     annotations = go.layout.Annotation(text = f'{outcome_types} after <br>{stop_types} Searches',
-                                                          font = {'family': 'Nunito', 'size': 12},
+                                                          font = {'family': 'Nunito, Tahoma, Arial', 'size': 12},
                                                           bgcolor = 'rgba(250, 250, 250, 0.8)',
                                                           align = 'left',
                                                           showarrow = False,
@@ -520,7 +520,7 @@ def plotly_yield_after_search_beat(stops_df,
     else:
         title = f'Yield Rates After Search {year[0]} - {year[-1]}'
 
-    font = 'Nunito'
+    font = 'Nunito, Tahoma, Arial'
 
     title = go.layout.Title(text = title,
                             font = {'family': font,
@@ -628,7 +628,7 @@ def plotly_yield_after_search(stops_df,
                          opacity = .6,
     #                      hovertext = text,
                          hoverlabel = {'bgcolor': 'white',
-                                       'font': {'family': 'Nunito', 'size': 12}},
+                                       'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                          showlegend = True,
                          yaxis = 'y1')
 
@@ -645,7 +645,7 @@ def plotly_yield_after_search(stops_df,
                          line = dict(color = 'black', width = 4),
     #                      hovertext = text,
                          hoverlabel = {'bgcolor': 'white',
-                                       'font': {'family': 'Nunito', 'size': 12}},
+                                       'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                          showlegend = True,
                          yaxis = 'y1',
                          visible = 'legendonly')
@@ -656,7 +656,7 @@ def plotly_yield_after_search(stops_df,
                          line = dict(color = 'cornflowerblue', width = 4, dash = 'dash'),
     #                      hovertext = text,
                          hoverlabel = {'bgcolor': 'white',
-                                       'font': {'family': 'Nunito', 'size': 12}},
+                                       'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                          showlegend = True,
                          yaxis = 'y1')
 
@@ -665,7 +665,7 @@ def plotly_yield_after_search(stops_df,
                          line = dict(color = 'firebrick', width = 4, dash = 'dash'),
     #                      hovertext = text,
                          hoverlabel = {'bgcolor': 'white',
-                                       'font': {'family': 'Nunito', 'size': 12}},
+                                       'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                          showlegend = True,
                          yaxis = 'y1')
 
@@ -679,7 +679,7 @@ def plotly_yield_after_search(stops_df,
                          line = dict(color = 'black', width = 1, dash = 'dot'),
     #                      hovertext = text,
                          hoverlabel = {'bgcolor': 'white',
-                                       'font': {'family': 'Nunito', 'size': 12}},
+                                       'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                          showlegend = True,
                          yaxis = 'y2',
                          visible = 'legendonly')
@@ -693,7 +693,7 @@ def plotly_yield_after_search(stops_df,
                          line = dict(color = 'black', width = 1, dash = 'dot'),
     #                      hovertext = text,
                          hoverlabel = {'bgcolor': 'white',
-                                       'font': {'family': 'Nunito', 'size': 12}},
+                                       'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                          showlegend = True,
                          yaxis = 'y2',
                          visible = 'legendonly')
@@ -707,13 +707,13 @@ def plotly_yield_after_search(stops_df,
                          line = dict(color = 'black', width = 1, dash = 'dot'),
     #                      hovertext = text,
                          hoverlabel = {'bgcolor': 'white',
-                                       'font': {'family': 'Nunito', 'size': 12}},
+                                       'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                          showlegend = True,
                          yaxis = 'y2',
                          visible = 'legendonly')
 
     annotations = go.layout.Annotation(text = f'{outcome_types} after <br>{stop_types} Searches',
-                                                          font = {'family': 'Nunito', 'size': 12},
+                                                          font = {'family': 'Nunito, Tahoma, Arial', 'size': 12},
                                                           bgcolor = 'rgba(250, 250, 250, 0.8)',
                                                           align = 'left',
                                                           showarrow = False,
@@ -725,7 +725,7 @@ def plotly_yield_after_search(stops_df,
                                                           borderwidth = 1)
     title = 'Yield Rate Analysis'
 
-    font = 'Nunito'
+    font = 'Nunito, Tahoma, Arial'
 
     title = go.layout.Title(text = title,
                             font = {'family': font,
@@ -761,7 +761,7 @@ def plotly_yield_after_search(stops_df,
                              overlaying = 'y',
                              side = 'right')
 
-    legend = go.layout.Legend(font = {'family': 'Nunito', 'size': 12},
+    legend = go.layout.Legend(font = {'family': 'Nunito, Tahoma, Arial', 'size': 12},
                               bgcolor = 'rgba(250, 250, 250, 0.8)',
                               x = .99,
                               xanchor = 'right',
@@ -836,15 +836,15 @@ def plotly_veil_of_darkness(stops_df,
                                            sizeref = 2. * max(size) / (75 ** 2),
                                            color = 'rgb(93, 164, 214)'),
                              textposition = 'middle center',
-                             textfont = {'family': 'Nunito', 'size': 12},
+                             textfont = {'family': 'Nunito, Tahoma, Arial', 'size': 12},
                              hoverinfo = 'text',
                              hovertext = text,
                              hoverlabel = {'bgcolor': 'white',
-                                           'font': {'family': 'Nunito', 'size': 12}},
+                                           'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                              showlegend = False)
 
     annotations = go.layout.Annotation(text = f'Percent of stops that are of White people <br>when race is visible vs. when race is not visible',
-                                                          font = {'family': 'Nunito', 'size': 12},
+                                                          font = {'family': 'Nunito, Tahoma, Arial', 'size': 12},
                                                           bgcolor = 'rgba(250, 250, 250, 0.8)',
                                                           align = 'left',
                                                           showarrow = False,
@@ -866,7 +866,7 @@ def plotly_veil_of_darkness(stops_df,
     else:
         title = f'Percent of Stops, White {year[0]}-{year[-1]}'
 
-    font = 'Nunito'
+    font = 'Nunito, Tahoma, Arial'
 
     title = go.layout.Title(text = title,
                             font = {'family': font,
@@ -953,15 +953,15 @@ def plotly_veil_of_darkness(stops_df,
                                            sizeref = 2. * max(size) / (75 ** 2),
                                            color = 'rgb(93, 164, 214)'),
                              textposition = 'middle center',
-                             textfont = {'family': 'Nunito', 'size': 12},
+                             textfont = {'family': 'Nunito, Tahoma, Arial', 'size': 12},
                              hoverinfo = 'text',
                              hovertext = text,
                              hoverlabel = {'bgcolor': 'white',
-                                           'font': {'family': 'Nunito', 'size': 12}},
+                                           'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                              showlegend = False)
 
     annotations = go.layout.Annotation(text = f'Percent of stops that are of White people <br>when race is visible vs. when race is not visible',
-                                                          font = {'family': 'Nunito', 'size': 12},
+                                                          font = {'family': 'Nunito, Tahoma, Arial', 'size': 12},
                                                           bgcolor = 'rgba(250, 250, 250, 0.8)',
                                                           align = 'left',
                                                           showarrow = False,
@@ -983,7 +983,7 @@ def plotly_veil_of_darkness(stops_df,
     else:
         title = f'Percent of Stops, White {year[0]}-{year[-1]}'
 
-    font = 'Nunito'
+    font = 'Nunito, Tahoma, Arial'
 
     title = go.layout.Title(text = title,
                             font = {'family': font,
@@ -1065,7 +1065,7 @@ def plot_beat_dems(census_df, beats, tracts):
 
     title = 'Population by Beat'
 
-    font = 'Nunito'
+    font = 'Nunito, Tahoma, Arial'
 
     title = go.layout.Title(text = title,
                             font = {'family': font,
@@ -1311,7 +1311,7 @@ def plot_stops(df, pedestrian, vehicle, searches, no_searches, arrests, citation
                          mode = 'lines',
                          name = 'Black',
                          hoverlabel = {'bgcolor': 'white',
-                                        'font': {'family': 'Nunito', 'size': 12}})
+                                        'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}})
     
     y = breakdown['white']
     x = breakdown.index
@@ -1319,7 +1319,7 @@ def plot_stops(df, pedestrian, vehicle, searches, no_searches, arrests, citation
                          mode = 'lines',
                          name = 'White',
                          hoverlabel = {'bgcolor': 'white',
-                                        'font': {'family': 'Nunito', 'size': 12}})
+                                        'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}})
     
     y = breakdown['hispanic']
     x = breakdown.index
@@ -1327,7 +1327,7 @@ def plot_stops(df, pedestrian, vehicle, searches, no_searches, arrests, citation
                          mode = 'lines',
                          name = 'Hispanic',
                          hoverlabel = {'bgcolor': 'white',
-                                        'font': {'family': 'Nunito', 'size': 12}},
+                                        'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                          visible = 'legendonly')
     
     y = breakdown['asian']
@@ -1336,11 +1336,11 @@ def plot_stops(df, pedestrian, vehicle, searches, no_searches, arrests, citation
                          mode = 'lines',
                          name = 'Asian',
                          hoverlabel = {'bgcolor': 'white',
-                                        'font': {'family': 'Nunito', 'size': 12}},
+                                        'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                          visible = 'legendonly')
    
     annotations = go.layout.Annotation(text = f'{stop_types}{outcome_types}{searched}',
-                                        font = {'family': 'Nunito', 'size': 12},
+                                        font = {'family': 'Nunito, Tahoma, Arial', 'size': 12},
                                         bgcolor = 'rgba(250, 250, 250, 0.8)',
                                         align = 'left',
                                         showarrow = False,
@@ -1368,7 +1368,7 @@ def plot_stops(df, pedestrian, vehicle, searches, no_searches, arrests, citation
                             xanchor = 'center',
                             yanchor = 'top')
 
-    font = 'Nunito'
+    font = 'Nunito, Tahoma, Arial'
 
     title = go.layout.Title(text = title,
                             font = {'family': font,
@@ -1399,7 +1399,7 @@ def plot_stops(df, pedestrian, vehicle, searches, no_searches, arrests, citation
 #                             range = [0, 10],
                             zeroline = False)
 
-    legend = go.layout.Legend(font = {'family': 'Nunito', 'size': 12},
+    legend = go.layout.Legend(font = {'family': 'Nunito, Tahoma, Arial', 'size': 12},
                               bgcolor = 'rgba(250, 250, 250, 0.8)',
                               x = .99,
                               xanchor = 'right',
@@ -1642,7 +1642,7 @@ def plot_ratios(#vehicle, pedestrian,
     #                      line = dict(color = 'grey', width = 2),
                          opacity = .6,
                          hoverlabel = {'bgcolor': 'white',
-                                       'font': {'family': 'Nunito', 'size': 12}},
+                                       'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                          showlegend = True)
 
     x = search_ratio.index
@@ -1653,7 +1653,7 @@ def plot_ratios(#vehicle, pedestrian,
     #                      line = dict(color = 'grey', width = 2),
                          opacity = .6,
                          hoverlabel = {'bgcolor': 'white',
-                                       'font': {'family': 'Nunito', 'size': 12}},
+                                       'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                          showlegend = True,
                          visible = 'legendonly')
 
@@ -1665,7 +1665,7 @@ def plot_ratios(#vehicle, pedestrian,
     #                      line = dict(color = 'grey', width = 2),
                          opacity = .6,
                          hoverlabel = {'bgcolor': 'white',
-                                       'font': {'family': 'Nunito', 'size': 12}},
+                                       'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                          showlegend = True,
                          visible = 'legendonly')
 
@@ -1677,7 +1677,7 @@ def plot_ratios(#vehicle, pedestrian,
     #                      line = dict(color = 'grey', width = 2),
                          opacity = .6,
                          hoverlabel = {'bgcolor': 'white',
-                                       'font': {'family': 'Nunito', 'size': 12}},
+                                       'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                          showlegend = True,
                          visible = 'legendonly')
 
@@ -1686,11 +1686,11 @@ def plot_ratios(#vehicle, pedestrian,
     #                      line = dict(color = 'grey', width = 2),
                          opacity = .6,
                          hoverlabel = {'bgcolor': 'white',
-                                       'font': {'family': 'Nunito', 'size': 12}},
+                                       'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                          showlegend = True)
 
     # annotations = go.layout.Annotation(text = f'{outcome_types} after <br>{stop_types} Searches',
-    #                                                           font = {'family': 'Nunito', 'size': 12},
+    #                                                           font = {'family': 'Nunito, Tahoma, Arial', 'size': 12},
     #                                                           bgcolor = 'rgba(250, 250, 250, 0.8)',
     #                                                           align = 'left',
     #                                                           showarrow = False,
@@ -1702,7 +1702,7 @@ def plot_ratios(#vehicle, pedestrian,
     #                                                           borderwidth = 1)
     title = 'Enforcement Ratios'
 
-    font = 'Nunito'
+    font = 'Nunito, Tahoma, Arial'
 
     title = go.layout.Title(text = title,
                             font = {'family': font,
@@ -1728,7 +1728,7 @@ def plot_ratios(#vehicle, pedestrian,
                             range = [0, 12],
                             zeroline = False)
 
-    legend = go.layout.Legend(font = {'family': 'Nunito', 'size': 12},
+    legend = go.layout.Legend(font = {'family': 'Nunito, Tahoma, Arial', 'size': 12},
                               bgcolor = 'rgba(250, 250, 250, 0.8)',
                               x = .99,
                               xanchor = 'right',
@@ -1899,7 +1899,7 @@ def make_traces(stops_df, pedestrian, vehicle, searches, no_searches, arrests, c
                          visible = False)
     
     annotations = go.layout.Annotation(text = f'{stop_types}{outcome_types}{searched}',
-                                      font = {'family': 'Nunito', 'size': 12},
+                                      font = {'family': 'Nunito, Tahoma, Arial', 'size': 12},
                                       bgcolor = 'rgba(250, 250, 250, 0.8)',
                                       align = 'left',
                                       showarrow = False,
@@ -1910,7 +1910,7 @@ def make_traces(stops_df, pedestrian, vehicle, searches, no_searches, arrests, c
                                       bordercolor = 'black',
                                       borderwidth = 1)
 
-    font = 'Nunito'
+    font = 'Nunito, Tahoma, Arial'
 
     title = go.layout.Title(text = title,
                             font = {'family': font,
@@ -1934,7 +1934,7 @@ def make_traces(stops_df, pedestrian, vehicle, searches, no_searches, arrests, c
     yaxis = go.layout.YAxis(title = ytitle,
                             zeroline = False)
 
-    legend = go.layout.Legend(font = {'family': 'Nunito', 'size': 12},
+    legend = go.layout.Legend(font = {'family': 'Nunito, Tahoma, Arial', 'size': 12},
                               bgcolor = 'rgba(250, 250, 250, 0.8)',
                               x = .99,
                               xanchor = 'right',
@@ -2169,7 +2169,7 @@ def make_ratio_traces(stops_df, vehicle, pedestrian, population, freq, minority,
                             mode = 'lines',
                             opacity = .6,
                             hoverlabel = {'bgcolor': 'white',
-                                        'font': {'family': 'Nunito', 'size': 12}},
+                                        'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                             showlegend = True,
                             visible = True)
 
@@ -2184,7 +2184,7 @@ def make_ratio_traces(stops_df, vehicle, pedestrian, population, freq, minority,
                             mode = 'lines',
                             opacity = .6,
                             hoverlabel = {'bgcolor': 'white',
-                                        'font': {'family': 'Nunito', 'size': 12}},
+                                        'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                             showlegend = True,
                             visible = 'legendonly')
 
@@ -2199,7 +2199,7 @@ def make_ratio_traces(stops_df, vehicle, pedestrian, population, freq, minority,
                             mode = 'lines',
                             opacity = .6,
                             hoverlabel = {'bgcolor': 'white',
-                                        'font': {'family': 'Nunito', 'size': 12}},
+                                        'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                             showlegend = True,
                             visible = 'legendonly')
         
@@ -2214,7 +2214,7 @@ def make_ratio_traces(stops_df, vehicle, pedestrian, population, freq, minority,
                             mode = 'lines',
                             opacity = .6,
                             hoverlabel = {'bgcolor': 'white',
-                                        'font': {'family': 'Nunito', 'size': 12}},
+                                        'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                             showlegend = True,
                             visible = 'legendonly')
 
@@ -2229,7 +2229,7 @@ def make_ratio_traces(stops_df, vehicle, pedestrian, population, freq, minority,
                             mode = 'lines',
                             opacity = .6,
                             hoverlabel = {'bgcolor': 'white',
-                                        'font': {'family': 'Nunito', 'size': 12}},
+                                        'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                             showlegend = True,
                             visible = 'legendonly')
 
@@ -2244,7 +2244,7 @@ def make_ratio_traces(stops_df, vehicle, pedestrian, population, freq, minority,
                             mode = 'lines',
                             opacity = .6,
                             hoverlabel = {'bgcolor': 'white',
-                                        'font': {'family': 'Nunito', 'size': 12}},
+                                        'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                             showlegend = True,
                             visible = 'legendonly')
     else:
@@ -2259,7 +2259,7 @@ def make_ratio_traces(stops_df, vehicle, pedestrian, population, freq, minority,
                             mode = 'lines',
                             opacity = .6,
                             hoverlabel = {'bgcolor': 'white',
-                                        'font': {'family': 'Nunito', 'size': 12}},
+                                        'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                             showlegend = True,
                             visible = True)
 
@@ -2274,7 +2274,7 @@ def make_ratio_traces(stops_df, vehicle, pedestrian, population, freq, minority,
                             mode = 'lines',
                             opacity = .6,
                             hoverlabel = {'bgcolor': 'white',
-                                        'font': {'family': 'Nunito', 'size': 12}},
+                                        'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                             showlegend = True,
                             visible = 'legendonly')
 
@@ -2289,7 +2289,7 @@ def make_ratio_traces(stops_df, vehicle, pedestrian, population, freq, minority,
                             mode = 'lines',
                             opacity = .6,
                             hoverlabel = {'bgcolor': 'white',
-                                        'font': {'family': 'Nunito', 'size': 12}},
+                                        'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                             showlegend = True,
                             visible = 'legendonly')
         
@@ -2304,7 +2304,7 @@ def make_ratio_traces(stops_df, vehicle, pedestrian, population, freq, minority,
                             mode = 'lines',
                             opacity = .6,
                             hoverlabel = {'bgcolor': 'white',
-                                        'font': {'family': 'Nunito', 'size': 12}},
+                                        'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                             showlegend = True,
                             visible = 'legendonly')
 
@@ -2319,7 +2319,7 @@ def make_ratio_traces(stops_df, vehicle, pedestrian, population, freq, minority,
                             mode = 'lines',
                             opacity = .6,
                             hoverlabel = {'bgcolor': 'white',
-                                        'font': {'family': 'Nunito', 'size': 12}},
+                                        'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                             showlegend = True,
                             visible = 'legendonly')
 
@@ -2327,7 +2327,7 @@ def make_ratio_traces(stops_df, vehicle, pedestrian, population, freq, minority,
 
 
     annotations = go.layout.Annotation(text = f'Black:White Ratios<br>Enforcement Actions',
-                                                              font = {'family': 'Nunito', 'size': 12},
+                                                              font = {'family': 'Nunito, Tahoma, Arial', 'size': 12},
                                                               bgcolor = 'rgba(250, 250, 250, 0.8)',
                                                               align = 'left',
                                                               showarrow = False,
@@ -2340,7 +2340,7 @@ def make_ratio_traces(stops_df, vehicle, pedestrian, population, freq, minority,
     
     title = f'Enforcement Ratios'
 
-    font = 'Nunito'
+    font = 'Nunito, Tahoma, Arial'
 
     title = go.layout.Title(text = title,
                             font = {'family': font,
@@ -2364,7 +2364,7 @@ def make_ratio_traces(stops_df, vehicle, pedestrian, population, freq, minority,
     yaxis = go.layout.YAxis(title = ytitle,
                             zeroline = False)
 
-    legend = go.layout.Legend(font = {'family': 'Nunito', 'size': 12},
+    legend = go.layout.Legend(font = {'family': 'Nunito, Tahoma, Arial', 'size': 12},
                               bgcolor = 'rgba(250, 250, 250, 0.8)',
                               x = .99,
                               xanchor = 'right',
@@ -2504,11 +2504,11 @@ def plot_problem(stops_df, pedestrian, vehicle, searches, no_searches, arrests, 
                 y = -0.5,
                 xanchor = 'center',
                 yanchor = 'bottom',
-                font = {'family':'Nunito'}
+                font = {'family':'Nunito, Tahoma, Arial'}
                 )
         ])
     if user_title:
-        font = 'Nunito'
+        font = 'Nunito, Tahoma, Arial'
         stops_title = go.layout.Title(text = user_title,
                             font = {'family': font,
                                     'size': 28},
@@ -2623,11 +2623,11 @@ def scatter_beat_dems(beat_dems,  calls_grouped, df_size, weighted = True, part_
                                            sizeref = 2. * max(s) / (75 ** 2),
                                            color = 'rgb(93, 164, 214)'),
                              textposition = 'middle center',
-                             textfont = {'family': 'Nunito', 'size': 12},
+                             textfont = {'family': 'Nunito, Tahoma, Arial', 'size': 12},
                              hoverinfo = 'text',
                              hovertext = [f'{s.iloc[i]} {hovertext}' for i in range(len(s))],
                              hoverlabel = {'bgcolor': 'white',
-                                           'font': {'family': 'Nunito', 'size': 12}},
+                                           'font': {'family': 'Nunito, Tahoma, Arial', 'size': 12}},
                              showlegend = False)
     
     trace_2 = go.Scatter(x = X, y = Y,
@@ -2635,7 +2635,7 @@ def scatter_beat_dems(beat_dems,  calls_grouped, df_size, weighted = True, part_
                          showlegend = False)
 
     annotations = go.layout.Annotation(text = f'''R-Squared:{round(r_value**2, 3)}<br>P-Value: {round(p_value, 3)}''',
-                                                          font = {'family': 'Nunito', 'size': 12},
+                                                          font = {'family': 'Nunito, Tahoma, Arial', 'size': 12},
                                                           bgcolor = 'rgba(250, 250, 250, 0.8)',
                                                           align = 'left',
                                                           showarrow = False,
@@ -2650,7 +2650,7 @@ def scatter_beat_dems(beat_dems,  calls_grouped, df_size, weighted = True, part_
     
     title = f'Beat Proportion Black by Total Population'
 
-    font = 'Nunito'
+    font = 'Nunito, Tahoma, Arial'
 
     title = go.layout.Title(text = title,
                             font = {'family': font,
@@ -2754,7 +2754,7 @@ def plot_stops_ratios(stops_df, population, freq,
         searched = ''
    
     annotations = go.layout.Annotation(text = f'{stop_types}{outcome_types}{searched}',
-                                      font = {'family': 'Nunito', 'size': 12},
+                                      font = {'family': 'Nunito, Tahoma, Arial', 'size': 12},
                                       bgcolor = 'rgba(250, 250, 250, 0.8)',
                                       align = 'left',
                                       showarrow = False,
@@ -2766,7 +2766,7 @@ def plot_stops_ratios(stops_df, population, freq,
                                       borderwidth = 1)
     title = 'Outcomes by Race'
 
-    font = 'Nunito'
+    font = 'Nunito, Tahoma, Arial'
 
     title = go.layout.Title(text = title,
                             font = {'family': font,
@@ -2792,7 +2792,7 @@ def plot_stops_ratios(stops_df, population, freq,
 #                             range = [0, 10],
                             zeroline = False)
 
-    legend = go.layout.Legend(font = {'family': 'Nunito', 'size': 12},
+    legend = go.layout.Legend(font = {'family': 'Nunito, Tahoma, Arial', 'size': 12},
                               bgcolor = 'rgba(250, 250, 250, 0.8)',
                               x = .99,
                               xanchor = 'right',
@@ -2885,7 +2885,7 @@ def plot_traffic_violation_offenses(df, population, top_type = 'Disparity'):
 
     title = f'Top Traffic Violation Offenses, 2021 ({pop_title})'
 
-    font = 'Nunito'
+    font = 'Nunito, Tahoma, Arial'
 
     title = go.layout.Title(text = title,
                             font = {'family': font,
@@ -2917,7 +2917,7 @@ def plot_traffic_violation_offenses(df, population, top_type = 'Disparity'):
                             overlaying = 'y',
                             side = 'right')
 
-    legend = go.layout.Legend(font = {'family': 'Nunito', 'size': 12},
+    legend = go.layout.Legend(font = {'family': 'Nunito, Tahoma, Arial', 'size': 12},
                           bgcolor = 'rgba(250, 250, 250, 0.8)',
                           x = .99,
                           xanchor = 'right',
@@ -2949,7 +2949,7 @@ def plot_force(df):
 
     title = f'Use of Force by Type'
 
-    font = 'Nunito'
+    font = 'Nunito, Tahoma, Arial'
 
     title = go.layout.Title(text = title,
                             font = {'family': font,
@@ -2972,7 +2972,7 @@ def plot_force(df):
     yaxis = go.layout.YAxis(title = ytitle,
                             zeroline = False)
 
-    legend = go.layout.Legend(font = {'family': 'Nunito', 'size': 12},
+    legend = go.layout.Legend(font = {'family': 'Nunito, Tahoma, Arial', 'size': 12},
                           bgcolor = 'rgba(250, 250, 250, 0.8)',
                           x = .99,
                           xanchor = 'right',
@@ -2999,7 +2999,7 @@ def plot_complaints(df):
 
     title = f'Use of Force, Complaints'
 
-    font = 'Nunito'
+    font = 'Nunito, Tahoma, Arial'
 
     title = go.layout.Title(text = title,
                             font = {'family': font,
@@ -3022,7 +3022,7 @@ def plot_complaints(df):
     yaxis = go.layout.YAxis(title = ytitle,
                             zeroline = False)
 
-    legend = go.layout.Legend(font = {'family': 'Nunito', 'size': 12},
+    legend = go.layout.Legend(font = {'family': 'Nunito, Tahoma, Arial', 'size': 12},
                           bgcolor = 'rgba(250, 250, 250, 0.8)',
                           x = .99,
                           xanchor = 'right',
