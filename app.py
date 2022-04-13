@@ -18,12 +18,12 @@ st.markdown(hide_decoration_bar_style, unsafe_allow_html=True)
 
 custom_font_style = ''' <style>
 @font-face {
-  font-family: 'Nunito', 'Tahoma', 'Arial';
+  font-family: 'Nunito ExtraLight', 'Tahoma', 'Arial';
   src: url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,500;1,600&display=swap');
 }
 
     html, body, [class*="css"]  {
-    font-family: 'Nunito', 'Tahoma', 'Arial';
+    font-family: 'Nunito ExtraLight', 'Tahoma', 'Arial';
     }
     </style> '''
 
