@@ -249,7 +249,7 @@ def app():
     <iframe src="https://storymaps.arcgis.com/stories/54e56f63ae25455180045f852b44b9dd?cover=false" width="100%" height="500px" frameborder="0" allowfullscreen allow="geolocation"></iframe>
     '''
     src = 'https://storymaps.arcgis.com/stories/54e56f63ae25455180045f852b44b9dd?cover=false'
-    st.components.v1.iframe(src, width=None, height=500, scrolling=False)
+    # st.components.v1.iframe(src, width=None, height=500, scrolling=False)
 
     st.markdown('---')
     # st.image('Berkeley_Banner.jpg')
