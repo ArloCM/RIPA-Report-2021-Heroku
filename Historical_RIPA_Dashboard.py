@@ -5,7 +5,7 @@ from Functions import *
 
 @st.cache
 def load_data(filepath):
-    df = pd.read_csv(filepath)
+    df = pd.read_csv(filepath, low_memory=False)
     df['datetime'] = pd.to_datetime(df['datetime'], infer_datetime_format=True)
     df['datetime'] = df['datetime'].dt.tz_localize(tz = pytz.timezone('America/Los_Angeles'), ambiguous = 'NaT')
     return df
