@@ -833,23 +833,25 @@ def plotly_veil_of_darkness(stops_df,
 
     df = df.copy()
     df['light'] = light
-    sizes = df.groupby('beat').sum()
-    size = sizes['white'] + sizes['black'] + sizes['hispanic'] + sizes['asian'] + sizes['other']
+
 
     df = df.set_index('datetime').between_time(dusk_min, dusk_max).groupby(['beat', 'light']).sum()
     df['prct_white'] = df['white']/(df['white'] + df['black'] + df['hispanic'] + df['asian'] + df['other'])
+
+    sizes = df.groupby('beat').sum()
+    size = sizes['white'] + sizes['black'] + sizes['hispanic'] + sizes['asian'] + sizes['other']
 
     y = df.loc[pd.IndexSlice[:, [1]], :]['prct_white']
     x = df.loc[pd.IndexSlice[:, [0]], :]['prct_white']
 
     text = [f'''
-    Beat {str(beat)} <br>
-    White Stops: {str(round(white_stops, 2))} <br>
-    Black Stops: {str(round(minority_stops, 2))} <br>
+    Beat {str(int(beat))} <br>
+    {str(round(round(white_stops, 2) * 100))}% out of all stops in the light<br>
+    {str(round(round(minority_stops, 2) * 100))}% out of all stops in the dark
     '''
             for white_stops, minority_stops, beat
-            in zip(list(df['white']),
-                   list(df['black']),
+            in zip(list(y),
+                   list(x),
                    list(sizes.index))]
 
     trace_1 = go.Scatter(x = x, y = y, text = size.index,
@@ -885,25 +887,25 @@ def plotly_veil_of_darkness(stops_df,
                               dash = 'dot'))
 
     if len(year) == 1:
-        title = f'Percent of Stops, White {year[0]}'
+        title = f'Stops of White people between {dusk_min} and {dusk_max} ({year[0]})'
     else:
-        title = f'Percent of Stops, White {year[0]}-{year[-1]}'
+        title = f'Stops of White people between {dusk_min} and {dusk_max} ({year[0]}-{year[-1]})'
 
     font = 'Nunito ExtraLight, Tahoma, Arial'
 
     title = go.layout.Title(text = title,
                             font = {'family': font,
-                                    'size': 28},
+                                    'size': 24},
                             y = 0.9,
                             x = 0.5,
                             xanchor = 'center',
                             yanchor = 'top')
 
-    xtitle = go.layout.xaxis.Title(text = 'Stops in the Dark',
+    xtitle = go.layout.xaxis.Title(text = '% of all Stops in the Dark',
                              font = {'family': font,
                                     'size': 24})
 
-    ytitle = go.layout.yaxis.Title(text = 'Stops in the Light',
+    ytitle = go.layout.yaxis.Title(text = '% of all Stops in the Light',
                              font = {'family': font,
                                     'size': 24})
 
